@@ -58,7 +58,7 @@
               </div>
 
               <div class="form-group">
-                <input name="addBrand" type="submt" class="btn btn-primary btn-block" value="Add New Brand">
+                <input name="addBrand" type="submit" class="btn btn-primary btn-block" value="Add New Brand">
               </div>
 
               </form>
