@@ -26,8 +26,46 @@
       <div class="container-fluid">
         <!-- Info boxes -->
         <div class="row">
-          <div class="col-12 col-sm-6 col-md-3">
-            This is the brand page
+          <div class="col-12 col-sm-12 col-md-12">
+          <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Add New Brand</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                  </button>
+                </div>
+                <!-- /.card-tools -->
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <form action="{{route('brands.store')}}" method="POST" enctype="multipart/form-data">
+              @csrf
+
+              <div class="form-group">
+                <label>Brand Name</label>
+                <input name="name" type="text" class="form-control" required="required" autocomplete="off">
+              </div>
+
+              <div class="form-group">
+                <label>Description</label>
+                <textarea name="desc" class="form-control" cols="30" rows="5"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label>Brand Logo/Image</label>
+                <input name="image" type="file" class="form-control-file">
+              </div>
+
+              <div class="form-group">
+                <input name="addBrand" type="submt" class="btn btn-primary btn-block" value="Add New Brand">
+              </div>
+
+              </form>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- card end  -->
           </div>
           <!-- /.col -->
         </div>
