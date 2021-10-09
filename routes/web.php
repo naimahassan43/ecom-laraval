@@ -22,8 +22,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route::group(['prefix'=>'admin'], function(){
-//     Route::group(['prefix'=>'/brands'], function(){
+Route::group(['prefix'=>'admin'], function(){
 
-//     })
-// });
+ 
+ Route::get('/','App\Http\Controllers\Backend\PageController@dashboard')->name('admin.dashboard');
+    Route::group(['prefix'=>'/brands'], function(){
+     Route::get('/manage','App\Http\Controllers\Backend\BrandController@index')->name('brands.manage');
+     Route::get('/create','App\Http\Controllers\Backend\BrandController@create')->name('brands.create');
+    });
+});
