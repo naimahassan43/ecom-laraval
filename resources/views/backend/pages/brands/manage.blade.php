@@ -70,8 +70,34 @@
                     </td>
                     <td>
                       <div class="btn-group">
-                        <a href="" class="btn btn-primary btn-sm">Update</a>
-                        <a href="" class="btn btn-danger btn-sm">Delete</a>
+                        <a href="{{route('brands.edit', $brand->id)}}" class="btn btn-primary btn-sm">Update</a>
+                        <a href="" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteBrand{{$brand->id}}">Delete</a>
+
+                        <!-- Modal start -->
+                        
+                        <div class="modal fade" id="deleteBrand{{$brand->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <div class="action-btn">
+                                  <form action="{{route('brands.destroy',$brand->id)}}" method="POST">
+                                    @csrf
+                                    <button type="submit" class="btn btn-danger">Delete</button>  
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Modal end -->
                       </div>
                     </td>
                   </tr>

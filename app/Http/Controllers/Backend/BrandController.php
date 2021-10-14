@@ -52,7 +52,7 @@ class BrandController extends Controller
 
         if($request->image) {
             $image=$request->file('image'); 
-            $img = time().'.'.$image->getClientOriginalExtension('image');
+            $img = time().'.'.$image->getClientOriginalExtension();
             $location = public_path('backend/img/brands/' . $img);
 
             Image::make($image)->resize(300,200)->save($location);
@@ -81,9 +81,14 @@ class BrandController extends Controller
      * @param  \App\Models\Backend\Brand  $brand
      * @return \Illuminate\Http\Response
      */
-    public function edit(Brand $brand)
+    public function edit($id)
     {
-        //
+        $brand = Brand::find($id);
+        if(!is_null($brand)){
+            return view('backend.pages.brands.edit', compact('brand'));
+        } else{
+            return route(brands.manage);
+        }
     }
 
     /**
@@ -93,9 +98,37 @@ class BrandController extends Controller
      * @param  \App\Models\Backend\Brand  $brand
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Brand $brand)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' =>'required|max:255',
+        ],
+        [
+            'name.required' =>'Please Provide Brand Name'
+        ]);
+
+        $brand=Brand::find($id);
+        $brand->name = $request->name;
+        $brand->desc = $request->desc;
+
+        if($request->image) {
+            // Delete existing file
+            if (File::exists('backend/img/brands/' . $brand->image)) {
+                File::delete('backend/img/brands/' . $brand->image);
+            }
+
+            //update image
+            $image=$request->file('image'); 
+            $img = time().'.'.$image->getClientOriginalExtension();
+            $location = public_path('backend/img/brands/' . $img);
+
+            Image::make($image)->resize(300,200)->save($location);
+
+            $brand->image = $img;
+        }
+        $brand->save();
+
+        return redirect()->route('brands.manage');
     }
 
     /**
@@ -104,8 +137,19 @@ class BrandController extends Controller
      * @param  \App\Models\Backend\Brand  $brand
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Brand $brand)
+    public function destroy($id)
     {
-        //
+        $brand = Brand::find($id);
+        if(!is_null($brand)){
+            // Delete existing file
+            if (File::exists('backend/img/brands/' . $brand->image)) {
+                File::delete('backend/img/brands/' . $brand->image);
+            }
+            $brand->delete();
+
+            return redirect()->route('brands.manage');
+        } else{
+            return redirect()->route('brands.manage');
+        }
     }
 }
