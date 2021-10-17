@@ -26,12 +26,23 @@ Route::group(['prefix'=>'admin'], function(){
 
  
  Route::get('/','App\Http\Controllers\Backend\PageController@dashboard')->name('admin.dashboard');
+        // Brands route
     Route::group(['prefix'=>'/brands'], function(){
-     Route::get('/manage','App\Http\Controllers\Backend\BrandController@index')->name('brands.manage');
-     Route::get('/create','App\Http\Controllers\Backend\BrandController@create')->name('brands.create');
-     Route::post('/store','App\Http\Controllers\Backend\BrandController@store')->name('brands.store');
-     Route::get('/edit/{id}','App\Http\Controllers\Backend\BrandController@edit')->name('brands.edit');
-     Route::post('/edit/{id}','App\Http\Controllers\Backend\BrandController@update')->name('brands.update');
-     Route::post('/destroy/{id}','App\Http\Controllers\Backend\BrandController@destroy')->name('brands.destroy');
-    });
+        Route::get('/manage','App\Http\Controllers\Backend\BrandController@index')->name('brands.manage');
+        Route::get('/create','App\Http\Controllers\Backend\BrandController@create')->name('brands.create');
+        Route::post('/store','App\Http\Controllers\Backend\BrandController@store')->name('brands.store');
+        Route::get('/edit/{id}','App\Http\Controllers\Backend\BrandController@edit')->name('brands.edit');
+        Route::post('/edit/{id}','App\Http\Controllers\Backend\BrandController@update')->name('brands.update');
+        Route::post('/destroy/{id}','App\Http\Controllers\Backend\BrandController@destroy')->name('brands.destroy');
+        });
+
+    // Category route
+    Route::group(['prefix'=>'/category'], function(){
+        Route::get('/manage','App\Http\Controllers\Backend\CategoryController@index')->name('category.manage');
+        Route::get('/create','App\Http\Controllers\Backend\CategoryController@create')->name('category.create');
+        Route::post('/store','App\Http\Controllers\Backend\CategoryController@store')->name('category.store');
+        Route::get('/edit/{id}','App\Http\Controllers\Backend\CategoryController@edit')->name('category.edit');
+        Route::post('/edit/{id}','App\Http\Controllers\Backend\CategoryController@update')->name('category.update');
+        Route::post('/destroy/{id}','App\Http\Controllers\Backend\CategoryController@destroy')->name('category.destroy');
+        });
 });
