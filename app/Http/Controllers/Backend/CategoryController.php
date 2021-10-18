@@ -3,7 +3,6 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Backend\Category;
 use Illuminate\Http\Request;
-
 use File;
 use Image;
 
