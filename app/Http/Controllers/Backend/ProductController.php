@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Backend\Product;
+use App\Models\Backend\ProductImage;
 use Illuminate\Http\Request;
 use File;
 use Image;
@@ -17,7 +18,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $products = Product::orderBy('id', 'desc')->get();
+        return view('backend.pages.products.manage', compact('products'));
     }
 
     /**
