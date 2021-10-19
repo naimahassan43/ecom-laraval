@@ -101,7 +101,13 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product = Product::find($id);
+        if(!is_null($product)){
+            return view('backend.pages.products.edit', compact('product'));
+        }
+        else{
+            return redirect()->route('products.manage');
+        }
     }
 
     /**
