@@ -8,7 +8,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Manage All Products</h1>
+            <h1 class="m-0 text-dark">Manage All Product</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -30,7 +30,7 @@
             <!-- card start  -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">All Products Lists</h3>
+                <h3 class="card-title">All Product Lists</h3>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
@@ -68,10 +68,22 @@
                     <td>{{$product->title}}</td>
                     <td>{{$product->category->name}}</td>
                     <td>{{$product->brand->name}}</td>
-                    <td>{{$product->status}}</td>
-                    <td>{{$product->price}}</td>
-                    <td>{{$product->offer_price}}</td>
-                    <td>{{$product->quantity}}</td>
+                    <td>
+                      @if ($product->status == 1)
+                        <span class="badge badge-success">Active</span>
+                      @else
+                      <span class="badge badge-danger">Deactive</span>
+                      @endif
+                    </td>
+                    <td>${{$product->price}}</td>
+                    <td>
+                      @if ($product->offer_price == NULL)
+                        <span class="badge badge-info">N/A</span>
+                      @else
+                        <span class="badge badge-success">${{$product->offer_price}}</span>
+                      @endif
+                    </td>
+                    <td>{{$product->quantity}} Pcs</td>
                     <td>
                       <div class="btn-group">
                         <a href="{{route('product.edit', $product->id)}}" class="btn btn-primary btn-sm">Update</a>
