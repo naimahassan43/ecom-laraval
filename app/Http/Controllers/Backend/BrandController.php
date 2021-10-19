@@ -111,7 +111,7 @@ class BrandController extends Controller
         $brand->name = $request->name;
         $brand->desc = $request->desc;
 
-        if($request->image) {
+        if(!empty($request->image) ) {
             // Delete existing file
             if (File::exists('backend/img/brands/' . $brand->image)) {
                 File::delete('backend/img/brands/' . $brand->image);

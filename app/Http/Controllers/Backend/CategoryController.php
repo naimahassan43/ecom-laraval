@@ -113,7 +113,7 @@ class CategoryController extends Controller
         $category->desc         = $request->desc;
         $category->parent_id    = $request->parent_id;
 
-        if($request->image) {
+        if(!empty($request->image)) {
             // Delete existing file
             if (File::exists('backend/img/categories/' . $category->image)) {
                 File::delete('backend/img/categories/' . $category->image);

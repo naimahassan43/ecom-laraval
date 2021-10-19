@@ -56,71 +56,83 @@
                   </tr>
                 </thead>
                 <tbody>
-                @php
-                  $i=1;
-                @endphp
+                  @php
+                    $i=1;
+                  @endphp
 
 
-                @foreach($products as $product)  
-                  <tr>
-                    <th scope="row">{{$i}}</th>
-                    <td></td>
-                    <td>{{$product->title}}</td>
-                    <td>{{$product->category->name}}</td>
-                    <td>{{$product->brand->name}}</td>
-                    <td>
-                      @if ($product->status == 1)
-                        <span class="badge badge-success">Active</span>
-                      @else
-                      <span class="badge badge-danger">Deactive</span>
-                      @endif
-                    </td>
-                    <td>${{$product->price}}</td>
-                    <td>
-                      @if ($product->offer_price == NULL)
-                        <span class="badge badge-info">N/A</span>
-                      @else
-                        <span class="badge badge-success">${{$product->offer_price}}</span>
-                      @endif
-                    </td>
-                    <td>{{$product->quantity}} Pcs</td>
-                    <td>
-                      <div class="btn-group">
-                        <a href="{{route('product.edit', $product->id)}}" class="btn btn-primary btn-sm">Update</a>
-                        <a href="" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteProduct{{$product->id}}">Delete</a>
+                  @foreach($products as $product)  
+                    <tr>
+                      <th scope="row">{{$i}}</th>
+                      <td>
+                        @php 
+                        $j=1; 
+                        @endphp
 
-                        <!-- Modal start -->
-                        
-                        <div class="modal fade" id="deleteProduct{{$product->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                                </button>
-                              </div>
-                              <div class="modal-body">
-                                <div class="action-btn">
-                                  <form action="{{route('product.destroy',$product->id)}}" method="POST">
-                                    @csrf
-                                    <button type="submit" class="btn btn-danger">Delete</button>  
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  </form>
+                        @foreach ( $product->images as $img)
+                          @if ( $j > 0)
+                            <img src="{{asset('backend/img/products/'.$img->image)}}" width="80" alt="">
+                          @endif
+                          @php $j-- ; 
+                          @endphp
+                        @endforeach
+                      </td>
+                      <td>{{$product->title}}</td>
+                      <td>{{$product->category->name}}</td>
+                      <td>{{$product->brand->name}}</td>
+                      <td>
+                        @if ($product->status == 1)
+                          <span class="badge badge-success">Active</span>
+                        @else
+                        <span class="badge badge-danger">Deactive</span>
+                        @endif
+                      </td>
+                      <td>${{$product->price}}</td>
+                      <td>
+                        @if ($product->offer_price == NULL)
+                          <span class="badge badge-info">N/A</span>
+                        @else
+                          <span class="badge badge-success">${{$product->offer_price}}</span>
+                        @endif
+                      </td>
+                      <td>{{$product->quantity}} Pcs</td>
+                      <td>
+                        <div class="btn-group">
+                          <a href="{{route('product.edit', $product->id)}}" class="btn btn-primary btn-sm">Update</a>
+                          <a href="" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteProduct{{$product->id}}">Delete</a>
+
+                          <!-- Modal start -->
+                          
+                          <div class="modal fade" id="deleteProduct{{$product->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="action-btn">
+                                    <form action="{{route('product.destroy',$product->id)}}" method="POST">
+                                      @csrf
+                                      <button type="submit" class="btn btn-danger">Delete</button>  
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </form>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </div>
 
-                        <!-- Modal end -->
-                      </div>
-                    </td>
-                  </tr>
-                  @php
-                  $i++;
-                @endphp
-                @endforeach
+                          <!-- Modal end -->
+                        </div>
+                      </td>
+                    </tr>
+                    @php
+                    $i++;
+                  @endphp
+                  @endforeach
                 </tbody>
               </table>
               </div>
