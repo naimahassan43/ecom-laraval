@@ -71,7 +71,7 @@
                           <div class="modal-dialog" role="document">
                             <div class="modal-content">
                               <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Do You Want to Delete this Division?</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                   <span aria-hidden="true">&times;</span>
                                 </button>
@@ -80,8 +80,8 @@
                                 <div class="action-btn">
                                   <form action="{{route('division.destroy',$division->id)}}" method="POST">
                                     @csrf
-                                    <button type="submit" class="btn btn-danger">Delete</button>  
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-danger">Yes</button>  
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
                                   </form>
                                 </div>
                               </div>

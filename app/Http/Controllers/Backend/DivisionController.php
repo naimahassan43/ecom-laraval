@@ -28,7 +28,7 @@ class DivisionController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.pages.divisions.create');
     }
 
     /**
@@ -39,7 +39,21 @@ class DivisionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' =>'required|max:255',
+            'priority' =>'required|max:255',
+        ],
+        [
+            'name.required' =>'Please Provide a valid Division Name',
+            'priority.required' =>'Please Set the Priority Number for Display',
+        ]);
+
+        $division = new Division();
+        $division->name = $request->name;
+        $division->priority = $request->priority;
+        $division->save();
+
+        return redirect()->route('division.manage');
     }
 
     /**
@@ -61,7 +75,14 @@ class DivisionController extends Controller
      */
     public function edit($id)
     {
-        //
+        $division = Division::find($id);
+
+        if(!is_null($division)){
+            return view('backend.pages.divisions.edit', compact('division'));
+        }
+        else{
+            return redirect()->route('division.manage');
+        }
     }
 
     /**
@@ -73,7 +94,21 @@ class DivisionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' =>'required|max:255',
+            'priority' =>'required|max:255',
+        ],
+        [
+            'name.required' =>'Please Provide a valid Division Name',
+            'priority.required' =>'Please Set the Priority Number for Display',
+        ]);
+
+        $division = Division::find($id);
+        $division->name = $request->name;
+        $division->priority = $request->priority;
+        $division->save();
+
+        return redirect()->route('division.manage');
     }
 
     /**
@@ -84,6 +119,14 @@ class DivisionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $division = Division::find($id);
+        if(!is_null($division)){
+            
+            $division->delete();
+
+            return redirect()->route('division.manage');
+        } else{
+            return redirect()->route('division.manage');
+        }
     }
 }
