@@ -3,10 +3,11 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\Backend\Division;
-use App\Models\Backend\District;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+
+use App\Models\Backend\Division;
+use App\Models\Backend\District;
 
 class DivisionController extends Controller
 {
@@ -121,7 +122,15 @@ class DivisionController extends Controller
     {
         $division = Division::find($id);
         if(!is_null($division)){
+
+            //Delete All the Districts under the Division
             
+            $districts = District::where('division_id', $division->id)->get();
+
+            foreach($districts as $district){
+                $district->delete();
+            }
+
             $division->delete();
 
             return redirect()->route('division.manage');

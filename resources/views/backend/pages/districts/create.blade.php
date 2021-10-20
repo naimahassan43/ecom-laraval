@@ -8,12 +8,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Create New Brands</h1>
+            <h1 class="m-0 text-dark">Create New District</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
-              <li class="breadcrumb-item active">Add New Brand</li>
+              <li class="breadcrumb-item active">Add New District</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -29,7 +29,7 @@
           <div class="col-12 col-sm-12 col-md-12">
           <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Add New Brand</h3>
+                <h3 class="card-title">Add New District</h3>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
@@ -39,26 +39,29 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <form action="{{route('brands.store')}}" method="POST" enctype="multipart/form-data">
+                <form action="{{route('district.store')}}" method="POST" enctype="multipart/form-data">
               @csrf
 
               <div class="form-group">
-                <label>Brand Name</label>
+                <label>District Name</label>
                 <input name="name" type="text" class="form-control" required="required" autocomplete="off">
               </div>
 
               <div class="form-group">
-                <label>Description</label>
-                <textarea name="desc" class="form-control" cols="30" rows="5"></textarea>
+                <label>Division Name</label>
+                <select class="form-control" name="division_id">
+                    <option value="0">Please select the division</option>
+
+                    @foreach ($divisions as $division)
+                      <option value="{{$division->id}}">
+                      {{$division->name}}
+                      </option>
+                    @endforeach
+                </select>
               </div>
 
               <div class="form-group">
-                <label>Brand Logo/Image</label>
-                <input name="image" type="file" class="form-control-file">
-              </div>
-
-              <div class="form-group">
-                <input name="addBrand" type="submit" class="btn btn-primary btn-block" value="Add New Brand">
+                <input name="addDistrict" type="submit" class="btn btn-primary btn-block" value="Add New District">
               </div>
 
               </form>
