@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Backend\Division;
 use App\Models\Backend\District;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class DivisionController extends Controller
 {
@@ -16,7 +17,8 @@ class DivisionController extends Controller
      */
     public function index()
     {
-        //
+        $divisions = Division::orderBy('priority','asc')->get();
+        return view('backend.pages.divisions.manage', compact('divisions'));
     }
 
     /**

@@ -99,6 +99,8 @@
             </ul>
           </li>
 
+          <li class="nav-header">LOCATION MANAGEMENT</li>
+
           <!-- Divisions -->
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
