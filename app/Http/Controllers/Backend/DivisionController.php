@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Backend\Division;
+use App\Models\Backend\District;
 use Illuminate\Http\Request;
 
 class DivisionController extends Controller
