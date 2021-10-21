@@ -1,18 +1,18 @@
 
 <!-- Bootstrap Core CSS -->
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.min.css')}}">
 
 <!-- Customizable CSS -->
-<link rel="stylesheet" href="assets/css/main.css">
-<link rel="stylesheet" href="assets/css/blue.css">
-<link rel="stylesheet" href="assets/css/owl.carousel.css">
-<link rel="stylesheet" href="assets/css/owl.transitions.css">
-<link rel="stylesheet" href="assets/css/animate.min.css">
-<link rel="stylesheet" href="assets/css/rateit.css">
-<link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+<link rel="stylesheet" href="{{asset('frontend/assets/css/main.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/assets/css/blue.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/assets/css/owl.carousel.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/assets/css/owl.transitions.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/assets/css/animate.min.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/assets/css/rateit.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap-select.min.css')}}">
 
 <!-- Icons/Glyphs -->
-<link rel="stylesheet" href="assets/css/font-awesome.css">
+<link rel="stylesheet" href="{{asset('frontend/assets/css/font-awesome.css')}}">
 
 <!-- Fonts -->
 <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
