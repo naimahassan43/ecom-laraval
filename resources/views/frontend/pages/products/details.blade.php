@@ -28,58 +28,44 @@
 
         <div id="owl-single-product" class="owl-carousel owl-theme" style="opacity: 1; display: block;">
             <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 4608px; left: 0px; display: block; transition: all 0ms ease 0s; transform: translate3d(0px, 0px, 0px);"><div class="owl-item" style="width: 256px;"><div class="single-product-gallery-item" id="slide1">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p8.jpg">
-                    <img class="img-responsive" alt="" src="assets/images/products/p8.jpg">
+                <a data-lightbox="image-1" data-title="Gallery" href="{{asset('frontend/assets/images/products/p8.jpg')}}">
+                    <img class="img-responsive" alt="" src="{{asset('frontend/assets/images/products/p8.jpg')}}">
                 </a>
             </div></div><div class="owl-item" style="width: 256px;"><div class="single-product-gallery-item" id="slide2">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p9.jpg">
-                    <img class="img-responsive" alt="" src="assets/images/products/p9.jpg">
+                <a data-lightbox="image-1" data-title="Gallery" href="{{asset('frontend/assets/images/products/p9.jpg')}}">
+                    <img class="img-responsive" alt="" src="{{asset('frontend/assets/images/products/p9.jpg')}}">
                 </a>
             </div></div><div class="owl-item" style="width: 256px;"><div class="single-product-gallery-item" id="slide3">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p10.jpg">
-                    <img class="img-responsive" alt="" src="assets/images/products/p10.jpg">
+                <a data-lightbox="image-1" data-title="Gallery" href="{{asset('frontend/assets/images/products/p10.jpg')}}">
+                    <img class="img-responsive" alt="" src="{{asset('frontend/assets/images/products/p10.jpg')}}">
                 </a>
             </div></div><div class="owl-item" style="width: 256px;"><div class="single-product-gallery-item" id="slide4">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p11.jpg">
-                    <img class="img-responsive" alt="" src="assets/images/products/p11.jpg">
+                <a data-lightbox="image-1" data-title="Gallery" href="{{asset('frontend/assets/images/products/p11.jpg')}}">
+                    <img class="img-responsive" alt="" src="{{asset('frontend/assets/images/products/p11.jpg')}}">
                 </a>
             </div></div><div class="owl-item" style="width: 256px;"><div class="single-product-gallery-item" id="slide5">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p12.jpg">
-                    <img class="img-responsive" alt="" src="assets/images/products/p12.jpg">
+                <a data-lightbox="image-1" data-title="Gallery" href="{{asset('frontend/assets/images/products/p12.jpg')}}">
+                    <img class="img-responsive" alt="" src="{{asset('frontend/assets/images/products/p12.jpg')}}">
                 </a>
             </div></div><div class="owl-item" style="width: 256px;"><div class="single-product-gallery-item" id="slide6">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p13.jpg">
-                    <img class="img-responsive" alt="" src="assets/images/products/p13.jpg">
+                <a data-lightbox="image-1" data-title="Gallery" href="{{asset('frontend/assets/images/products/p13.jpg')}}">
+                    <img class="img-responsive" alt="" src="{{asset('frontend/assets/images/products/p13.jpg')}}">
                 </a>
             </div></div><div class="owl-item" style="width: 256px;"><div class="single-product-gallery-item" id="slide7">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p14.jpg">
-                    <img class="img-responsive" alt="" src="assets/images/products/p14.jpg">
+                <a data-lightbox="image-1" data-title="Gallery" href="{{asset('frontend/assets/images/products/p14.jpg')}}">
+                    <img class="img-responsive" alt="" src="{{asset('frontend/assets/images/products/p14.jpg')}}">
                 </a>
             </div></div><div class="owl-item" style="width: 256px;"><div class="single-product-gallery-item" id="slide8">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p15.jpg">
-                    <img class="img-responsive" alt="" src="assets/images/products/p15.jpg">
+                <a data-lightbox="image-1" data-title="Gallery" href="{{asset('frontend/assets/images/products/p15.jpg')}}">
+                    <img class="img-responsive" alt="" src="{{asset('frontend/assets/images/products/p15.jpg')}}">
                 </a>
             </div></div><div class="owl-item" style="width: 256px;"><div class="single-product-gallery-item" id="slide9">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p16.jpg">
-                    <img class="img-responsive" alt="" src="assets/images/products/p16.jpg">
+                <a data-lightbox="image-1" data-title="Gallery" href="{{asset('frontend/assets/images/products/p16.jpg')}}">
+                    <img class="img-responsive" alt="" src="{{asset('frontend/assets/images/products/p16.jpg')}}">
                 </a>
             </div></div></div></div><!-- /.single-product-gallery-item -->
 
-            <!-- /.single-product-gallery-item -->
-
-            <!-- /.single-product-gallery-item -->
-
-            <!-- /.single-product-gallery-item -->
-
-            <!-- /.single-product-gallery-item -->
-
-            <!-- /.single-product-gallery-item -->
-
-            <!-- /.single-product-gallery-item -->
-
-            <!-- /.single-product-gallery-item -->
-
-            <!-- /.single-product-gallery-item -->
+           
 
         <div class="owl-controls clickable"><div class="owl-pagination"><div class="owl-page active"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div></div></div></div><!-- /.single-product-slider -->
 
@@ -89,46 +75,46 @@
             <div id="owl-single-product-thumbnails" class="owl-carousel owl-theme" style="opacity: 1; display: block;">
                 <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 1530px; left: 0px; display: block; transition: all 0ms ease 0s; transform: translate3d(0px, 0px, 0px);"><div class="owl-item" style="width: 85px;"><div class="item">
                     <a class="horizontal-thumb active" data-target="#owl-single-product" data-slide="1" href="#slide1">
-                        <img class="img-responsive" width="85" alt="" src="assets/images/products/p17.jpg">
+                        <img class="img-responsive" width="85" alt="" src="{{asset('frontend/assets/images/products/p17.jpg')}}">
                     </a>
                 </div></div><div class="owl-item" style="width: 85px;"><div class="item">
                     <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="2" href="#slide2">
-                        <img class="img-responsive" width="85" alt="" src="assets/images/products/p18.jpg">
+                        <img class="img-responsive" width="85" alt="" src="{{asset('frontend/assets/images/products/p18.jpg')}}">
                     </a>
                 </div></div><div class="owl-item" style="width: 85px;"><div class="item">
 
                     <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="3" href="#slide3">
-                        <img class="img-responsive" width="85" alt="" src="assets/images/products/p19.jpg">
+                        <img class="img-responsive" width="85" alt="" src="{{asset('frontend/assets/images/products/p19.jpg')}}">
                     </a>
                 </div></div><div class="owl-item" style="width: 85px;"><div class="item">
 
                     <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="4" href="#slide4">
-                        <img class="img-responsive" width="85" alt="" src="assets/images/products/p20.jpg">
+                        <img class="img-responsive" width="85" alt="" src="{{asset('frontend/assets/images/products/p20.jpg')}}">
                     </a>
                 </div></div><div class="owl-item" style="width: 85px;"><div class="item">
 
                     <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="5" href="#slide5">
-                        <img class="img-responsive" width="85" alt="" src="assets/images/products/p21.jpg">
+                        <img class="img-responsive" width="85" alt="" src="{{asset('frontend/assets/images/products/p21.jpg')}}">
                     </a>
                 </div></div><div class="owl-item" style="width: 85px;"><div class="item">
 
                     <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="6" href="#slide6">
-                        <img class="img-responsive" width="85" alt="" src="assets/images/products/p22.jpg">
+                        <img class="img-responsive" width="85" alt="" src="{{asset('frontend/assets/images/products/p22.jpg')}}">
                     </a>
                 </div></div><div class="owl-item" style="width: 85px;"><div class="item">
 
                     <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="7" href="#slide7">
-                        <img class="img-responsive" width="85" alt="" src="assets/images/products/p23.jpg">
+                        <img class="img-responsive" width="85" alt="" src="{{asset('frontend/assets/images/products/p23.jpg')}}">
                     </a>
                 </div></div><div class="owl-item" style="width: 85px;"><div class="item">
 
                     <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="8" href="#slide8">
-                        <img class="img-responsive" width="85" alt="" src="assets/images/products/p24.jpg">
+                        <img class="img-responsive" width="85" alt="" src="{{asset('frontend/assets/images/products/p24.jpg')}}">
                     </a>
                 </div></div><div class="owl-item" style="width: 85px;"><div class="item">
 
                     <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="9" href="#slide9">
-                        <img class="img-responsive" width="85" alt="" src="assets/images/products/p25.jpg">
+                        <img class="img-responsive" width="85" alt="" src="{{asset('frontend/assets/images/products/p25.jpg')}}">
                     </a>
                 </div></div></div></div>
 
@@ -411,7 +397,7 @@
 	<div class="product">		
 		<div class="product-image">
 			<div class="image">
-				<a href="detail.html"><img src="assets/images/products/p1.jpg" alt=""></a>
+				<a href="detail.html"><img src="{{asset('frontend/assets/images/products/p1.jpg')}}" alt=""></a>
 			</div><!-- /.image -->			
 
 			            <div class="tag sale"><span>sale</span></div>            		   
@@ -465,7 +451,7 @@
 	<div class="product">		
 		<div class="product-image">
 			<div class="image">
-				<a href="detail.html"><img src="assets/images/products/p2.jpg" alt=""></a>
+				<a href="detail.html"><img src="{{asset('frontend/assets/images/products/p2.jpg')}}" alt=""></a>
 			</div><!-- /.image -->			
 
 			            <div class="tag sale"><span>sale</span></div>            		   
@@ -519,7 +505,7 @@
 	<div class="product">		
 		<div class="product-image">
 			<div class="image">
-				<a href="detail.html"><img src="assets/images/products/p3.jpg" alt=""></a>
+				<a href="detail.html"><img src="{{asset('frontend/assets/images/products/p3.jpg')}}" alt=""></a>
 			</div><!-- /.image -->			
 
 			                        <div class="tag hot"><span>hot</span></div>		   
@@ -573,7 +559,7 @@
 	<div class="product">		
 		<div class="product-image">
 			<div class="image">
-				<a href="detail.html"><img src="assets/images/products/p4.jpg" alt=""></a>
+				<a href="detail.html"><img src="{{asset('frontend/assets/images/products/p4.jpg')}}" alt=""></a>
 			</div><!-- /.image -->			
 
 			<div class="tag new"><span>new</span></div>                        		   
@@ -627,7 +613,7 @@
 	<div class="product">		
 		<div class="product-image">
 			<div class="image">
-				<a href="detail.html"><img src="assets/images/products/p5.jpg" alt=""></a>
+				<a href="detail.html"><img src="{{asset('frontend/assets/images/products/p5.jpg')}}" alt=""></a>
 			</div><!-- /.image -->			
 
 			                        <div class="tag hot"><span>hot</span></div>		   
@@ -681,7 +667,7 @@
 	<div class="product">		
 		<div class="product-image">
 			<div class="image">
-				<a href="detail.html"><img src="assets/images/products/p6.jpg" alt=""></a>
+				<a href="detail.html"><img src="{{asset('frontend/assets/images/products/p6.jpg')}}" alt=""></a>
 			</div><!-- /.image -->			
 
 			<div class="tag new"><span>new</span></div>                        		   
@@ -752,8 +738,5 @@
 
 </div><!-- /.container -->
 </div>
-
-     
-
 
 @endsection
