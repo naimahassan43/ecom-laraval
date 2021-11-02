@@ -1,9 +1,9 @@
 @extends ('frontend.layout.template')
 
 @section ('body-content')
-@include ('frontend.includes.sidebar')
+@include ('frontend.includes.main-sidebar')
  <!-- ============================================== CONTENT ============================================== -->
- <div class="col-xs-12 col-sm-12 col-md-9 homebanner-holder"> 
+  <div class="col-xs-12 col-sm-12 col-md-9 homebanner-holder"> 
     <!-- ========================================== SECTION – HERO ========================================= -->
     
     <div id="hero">
@@ -2087,4 +2087,9 @@
   </div>
   <!-- /.homebanner-holder --> 
   <!-- ============================================== CONTENT : END ============================================== --> 
+  </div>
+   
+    @include ('frontend.includes.brands')
+  </div>
+</div>
 @endsection()

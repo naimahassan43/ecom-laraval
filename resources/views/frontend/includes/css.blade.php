@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="{{asset('frontend/assets/css/animate.min.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/assets/css/rateit.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap-select.min.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/assets/css/lightbox.css')}}">
 
 <!-- Icons/Glyphs -->
 <link rel="stylesheet" href="{{asset('frontend/assets/css/font-awesome.css')}}">

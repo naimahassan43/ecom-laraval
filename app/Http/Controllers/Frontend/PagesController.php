@@ -27,6 +27,18 @@ class PagesController extends Controller
         return view('frontend.pages.products.index');
     }
 
+    
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function productDetails()
+    {
+        return view('frontend.pages.products.details');
+    }
+
+
     /**
      * Store a newly created resource in storage.
      *

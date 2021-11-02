@@ -1,7 +1,7 @@
 @extends ('frontend.layout.template')
 
 @section ('body-content')
- @include ('frontend.includes.sidebar')
+ @include ('frontend.includes.main-sidebar')
 <!-- 
 <div class="breadcrumb">
   <div class="container">
@@ -1218,5 +1218,10 @@
         
       </div>
       <!-- /.col --> 
+      </div>
+   
+    @include ('frontend.includes.brands')
+  </div>
+</div>
 
 @endsection

@@ -17,16 +17,10 @@
 </header>
 <!-- ============================================== HEADER : END ============================================== -->
 
-<div class="body-content outer-top-xs" id="top-banner-and-menu">
-  <div class="container">
-    <div class="row"> 
+
       <!-- Body Content -->
       @yield('body-content')
-    </div>
-   
-    @include ('frontend.includes.brands')
-  </div>
-</div>
+    
 <!-- /#top-banner-and-menu --> 
 @include ('frontend.includes.footer')
 @include ('frontend.includes.script')
