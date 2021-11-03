@@ -51,11 +51,6 @@
                       </div>
 
                       <div class="form-group">
-                        <label>Description</label>
-                        <textarea name="description" class="form-control" cols="30" rows="2"></textarea>
-                      </div>
-
-                      <div class="form-group">
                         <label>Brand</label>
                         <select name="brand_id" class="form-control">
                           <option value="">Please Select Product Brand</option>
@@ -81,10 +76,6 @@
                       
                         </select>
                       </div>
-
-                    </div>
-                    <!-- // Right-part -->
-                    <div class="col-lg-6 col-6">
                       <div class="form-group">
                         <label>Regular Price</label>
                         <input name="price" type="text" class="form-control" required="required" autocomplete="off">
@@ -99,7 +90,20 @@
                         <label>Product Quantity</label>
                         <input name="quantity" type="text" class="form-control" required="required" autocomplete="off">
                       </div>
-
+                      <div class="form-group">
+                        <label>Product Search Tags</label>
+                        <input name="tags" type="text" class="form-control">
+                      </div>
+                    </div>
+                    <!-- // Right-part -->
+                    <div class="col-lg-6 col-6">
+                      <div class="form-group">
+                        <label>Featured (Yes/No)</label>
+                        <select name="featured" class="form-control">
+                          <option value="1">Yes</option>
+                          <option value="0">No</option>
+                        </select>
+                      </div>
                       <div class="form-group">
                         <label>Published Status</label>
                         <select name="status" class="form-control">
@@ -107,42 +111,52 @@
                           <option value="0">In-active</option>
                         </select>
                       </div>
+                      <div class="form-group">
+                        <label>Short Description</label>
+                        <textarea name="sdescription" class="form-control" cols="30" rows="3"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <label>Description</label>
+                        <textarea name="description" class="form-control" cols="30" rows="10"></textarea>
+                      </div>
+
                     </div>
                   </div>
                   <!-- //Thumbnail Image -->
                   <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg">
                       <div class="form-group">
-                        <label>Main Product Thumbnail Image</label>
+                        <label>Thumbnail Image</label>
                         <input name="p_image[]" type="file" class="form-control-file">
                       </div>
                     </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-3">
+                    <div class="col-lg">
                       <div class="form-group">
                         <label>Image-2</label>
                         <input name="p_image[]" type="file" class="form-control-file">
                       </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg">
                       <div class="form-group">
                         <label>Image-3</label>
                         <input name="p_image[]" type="file" class="form-control-file">
                       </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg">
                       <div class="form-group">
                         <label>Image-4</label>
                         <input name="p_image[]" type="file" class="form-control-file">
                       </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg">
                       <div class="form-group">
                         <label>Image-5</label>
                         <input name="p_image[]" type="file" class="form-control-file">
                       </div>
                     </div>
+                  </div>
+                  <div class="row">
+                
                   </div>
                   <div class="form-group">
                     <input name="addProduct" type="submit" class="btn btn-primary btn-block" value="Add New Product">

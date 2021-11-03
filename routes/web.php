@@ -16,12 +16,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','App\Http\Controllers\Frontend\PagesController@home')->name('homepage');
 
 Route::group(['prefix'=>'products'], function(){
-    // All products 
+    // All products page view
     Route::get('/','App\Http\Controllers\Frontend\ProductsController@index')->name('product.all');
-    // single product 
+    // single product page view
     Route::get('/{slug}','App\Http\Controllers\Frontend\ProductsController@show')->name('product.show');
 });
 
+Route::group(['prefix'=>'categories'], function(){
+    
+    // Category page view
+    Route::get('/','App\Http\Controllers\Frontend\CategoriesController@index')->name('category.all');
+    // Single (parent/child) Category page view
+    Route::get('/{slug}','App\Http\Controllers\Frontend\CategoriesController@show')->name('category.show');
+});
 
 
 

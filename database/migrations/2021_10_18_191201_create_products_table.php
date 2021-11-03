@@ -23,6 +23,8 @@ class CreateProductsTable extends Migration
             $table->integer('quantity')->default(1);
             $table->integer('price');
             $table->integer('offer_price')->nullable();
+            $table->integer('featured')->default(0)->comment('1 for Hot Sale, 0 for Normal');
+            $table->string('tags')->nullable();
             $table->integer('status')->default(0);
             $table->timestamps();
         });

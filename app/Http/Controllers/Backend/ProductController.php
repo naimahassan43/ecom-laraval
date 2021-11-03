@@ -63,6 +63,8 @@ class ProductController extends Controller
         $product->price                 = $request->price;
         $product->offer_price           = $request->offer_price;
         $product->quantity              = $request->quantity;
+        $product->tags                  = $request->tags;
+        $product->featured              = $request->featured;
         $product->status                = $request->status;
         $product->save();
 

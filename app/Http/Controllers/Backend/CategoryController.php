@@ -47,6 +47,7 @@ class CategoryController extends Controller
 
         $category               =   new Category();
         $category->name         = $request->name;
+        $category->slug         =  Str::slug($request->name);
         $category->desc         = $request->desc;
         $category->parent_id    = $request->parent_id;
 
@@ -110,6 +111,7 @@ class CategoryController extends Controller
 
         $category               = Category::find($id);
         $category->name         = $request->name;
+        $category->slug         = Str::slug($request->name);
         $category->desc         = $request->desc;
         $category->parent_id    = $request->parent_id;
 
