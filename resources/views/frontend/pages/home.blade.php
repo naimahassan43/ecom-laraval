@@ -113,7 +113,7 @@
                   <div class="product">
                     <div class="product-image">
                       <div class="image"> 
-                        <a href="detail.html">
+                        <a href="{{route('product.show',$recentItem->slug)}}">
                         @php 
                         $j=1; 
                         @endphp
@@ -135,7 +135,9 @@
                     <!-- /.product-image -->
                     
                     <div class="product-info text-left">
-                      <h3 class="name"><a href="detail.html">{{$recentItem->title}}</a></h3>
+                      <h3 class="name">
+                        <a href="{{route('product.show',$recentItem->slug)}}">{{$recentItem->title}}</a>
+                      </h3>
                       <div class="rating rateit-small"></div>
                       <div class="description"></div>
                       <div class="product-price"> 

@@ -21,9 +21,20 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        //
+        $allProducts= Product::orderBy('id','desc')->paginate(21);
+        return view('frontend.pages.products.index',compact('allProducts'));
     }
-
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($slug)
+    {
+        $productDetails = Product::where('slug', $slug)->first();
+        return view('frontend.pages.products.details',compact('productDetails'));
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -45,16 +56,7 @@ class ProductsController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+    
 
     /**
      * Show the form for editing the specified resource.

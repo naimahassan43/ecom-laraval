@@ -136,7 +136,7 @@
 </div><!-- /.gallery-holder -->        			
 					<div class="col-sm-6 col-md-7 product-info-block">
 						<div class="product-info">
-							<h1 class="name">Floral Print Buttoned</h1>
+							<h1 class="name">{{$productDetails->title}}</h1>
 							
 							<div class="rating-reviews m-t-20">
 								<div class="row">
@@ -160,7 +160,12 @@
 									</div>
 									<div class="col-sm-9">
 										<div class="stock-box">
-											<span class="value">In Stock</span>
+											@if($productDetails->quantity == 0)
+											<span class="value">Out of Stock</span>
+											@else
+														<span class="value">In Stock</span>
+											@endif
+												
 										</div>	
 									</div>
 								</div><!-- /.row -->	
