@@ -95,5 +95,16 @@ Route::group(['prefix'=>'admin'], function(){
         Route::post('edit/{id}','App\Http\Controllers\Backend\DistrictController@update')->name('district.update');
         Route::post('destroy/{id}','App\Http\Controllers\Backend\DistrictController@destroy')->name('district.destroy');
         });
+
+    // Slider route
+    Route::group(['prefix'=>'/slider'], function(){
+        Route::get('/manage','App\Http\Controllers\Backend\SliderController@index')->name('slider.manage');
+        Route::get('/create','App\Http\Controllers\Backend\SliderController@create')->name('slider.create');
+        Route::post('/store','App\Http\Controllers\Backend\SliderController@store')->name('slider.store');
+        Route::get('/edit/{id}','App\Http\Controllers\Backend\SliderController@edit')->name('slider.edit');
+        Route::post('edit/{id}','App\Http\Controllers\Backend\SliderController@update')->name('slider.update');
+        Route::post('destroy/{id}','App\Http\Controllers\Backend\SliderController@destroy')->name('slider.destroy');
+        });
+
     
 });

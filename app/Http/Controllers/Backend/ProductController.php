@@ -56,6 +56,7 @@ class ProductController extends Controller
 
         $product                        =   new Product();
         $product->title                 = $request->title;
+        $product->sdescription          = $request->sdescription;
         $product->description           = $request->description;
         $product->slug                  =  Str::slug($request->title);
         $product->brand_id              = $request->brand_id;
@@ -134,6 +135,7 @@ class ProductController extends Controller
 
         $product                        = Product::find($id);
         $product->title                 = $request->title;
+        $product->sdescription          = $request->sdescription;
         $product->description           = $request->description;
         $product->slug                  =  Str::slug($request->title);
         $product->brand_id              = $request->brand_id;
@@ -141,6 +143,8 @@ class ProductController extends Controller
         $product->price                 = $request->price;
         $product->offer_price           = $request->offer_price;
         $product->quantity              = $request->quantity;
+        $product->tags                  = $request->tags;
+        $product->featured              = $request->featured;
         $product->status                = $request->status;
         $product->save();
 
